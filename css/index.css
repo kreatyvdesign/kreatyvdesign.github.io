@@ -225,7 +225,7 @@ a.twitter-icon, a.linkedin-icon {
   background: url(images/icon_linkedin_hover.svg);
 }
 .view-work {
-  background-color: #fff;
+  background-color: transparent;
   display: block;
   position: absolute;
   bottom: 0px;
