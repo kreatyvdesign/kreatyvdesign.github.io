@@ -36,4 +36,8 @@ $(document).ready(function(){
     }
   });
 
+  $(window).scroll(function () {
+    $('#menuCheckbox').prop('checked', false);
+  })
+
 });

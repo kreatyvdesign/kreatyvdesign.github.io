@@ -15,17 +15,21 @@
     <meta property="og:image" content="images/ui_toolkit_home.png">
     <meta property="og:url" content="http://kreatyvdesign.com">
     <!-- Custom -->
-    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700|Roboto+Slab|Roboto:100,300,400,500" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700|Roboto+Slab|Roboto:100,300,400,500,700" rel="stylesheet">
     <link href="css/3d.css" rel="stylesheet">
   </head>
   <body data-spy="scroll" data-target=".sidenav-links">
     <div class="branding">
-      Kreatyv Design / <span>3D</span>
+      <a href="#section1">Kreatyv Design / <span>3D</span></a>
     </div>
     <!-- Side navigation -->
     <div class="sidenav">
+      <div class="sidenav-links">
+          <a class="nav-link active" href="#section1"><span></span></a>
+          <a class="nav-link" href="#section2"><span></span></a>
+      </div>
       <div id="menuToggle">
-          <input type="checkbox" />
+          <input id="menuCheckbox" type="checkbox" />
           <span></span>
           <span></span>
           <span></span>
@@ -36,27 +40,20 @@
             </div>
           </div>
       </div>
-      <div class="sidenav-links">
-        <nav class="nav flex-column" id="navbar">
-          <a class="nav-link active" href="#section1"><span></span></a>
-          <a class="nav-link" href="#section2"><span></span></a>
-        </nav>
-      </div>
     </div>
     <!-- Page content -->
     <div class="main01" id="section1" style="background-color: #fff; background-image: url('images/blender_donuts_render.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center center;">
-      <div class ="details">
-        <div id="info-panel">
-          <input type="checkbox" />
-          <span class="one"></span>
-          <span></span>
-          <div id="description" class="description">
-            <h1 class="section-title">Blender Tutorial</h1>
-            <p class="section-text">My first Blender render. Blender is a free 3D modeling tool that can be used to create and animate models for AR and VR. It was my first time working with 3D modeling, and it was an interesting (and challenging) exercise. Thank you to Andrew Price and his Blender Beginner Youtube tutorials for a great overview of the software.</p>
-            <p class="section-text"><a class="more-info" href="images/blender_donuts_render.jpg" target="_blank">VIEW FULL IMAGE</a></p>
-          </div>
+      <div id="info-panel">
+        <input type="checkbox" />
+        <span class="one"></span>
+        <span></span>
+        <div id="description" class="description">
+          <h1 class="section-title">Blender Tutorial</h1>
+          <p class="section-text">My first Blender render. Blender is a free 3D modeling tool that can be used to create and animate models for AR and VR. It was my first time working with 3D modeling, and it was an interesting (and challenging) exercise. Thank you to <a href="https://twitter.com/andrewpprice" target="_blank">Andrew Price</a> and his <a href="https://www.youtube.com/playlist?list=PLjEaoINr3zgHs8uzT3yqe4iHGfkCmMJ0P&disable_polymer=true" target="_blank">Blender Beginner Youtube tutorials</a> for a great overview of the software.</p>
+          <p class="section-text"><a class="more-info" href="images/blender_donuts_render.jpg" target="_blank">VIEW FULL IMAGE</a></p>
         </div>
       </div>
+      <div class="shader">&nbsp;</div>
     </div>
     <div class="main02" id="section2">
       <div class="about-blurb">

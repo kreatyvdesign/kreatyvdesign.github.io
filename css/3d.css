@@ -3,10 +3,22 @@ body {
   position: relative;
   background-color: #000;
 }
+@keyframes appear {
+  from {opacity:0;}
+  to {opacity:1;}
+}
 .branding {
   display: block;
-  width: 100%;
-  height: 369px;
+  width: auto;
+  height: auto;
+  position: fixed;
+  top:0px;
+  left:0px;
+  z-index: 1;
+  padding: 20px 25px;
+}
+.branding a {
+  display: block;
   position: fixed;
   top:0px;
   left:0px;
@@ -18,9 +30,15 @@ body {
   letter-spacing: 3px;
   font-size: 18px;
   color: #fff;
-  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0));
+  text-decoration: none;
+  opacity: 0;
+  animation: appear;
+  animation-delay: 1s;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
-.branding span {
+.branding a span {
   font-weight: 500;
 }
 .copyright {
@@ -37,8 +55,8 @@ body {
   letter-spacing: 0.5px;
 }
 .sidenav {
-    height: 100%;
-    width: 50px;
+    height: 100vh;
+    width: 70px;
     position: fixed;
     z-index: 2;
     top: 0;
@@ -46,14 +64,19 @@ body {
     background-color: #000;
     display: table;
 }
+@media screen and (max-width: 768px) {
+  .sidenav {
+    width: 50px;
+  }
+}
 #menuToggle {
   display: block;
-  position: fixed;
+  position: absolute;
   top: 25px;
-  right: 12px;
-  z-index: 1;
+  right: calc(50% - 12px);
   -webkit-user-select: none;
   user-select: none;
+  z-index: 1;
 }
 
 #menuToggle input {
@@ -78,18 +101,17 @@ body {
   background: #fff;
   z-index: 2;
   transform-origin: 2px 0px;
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-          opacity 0.55s ease;
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0), opacity 0.55s ease;
   }
 
-  #menuToggle span:first-child {
-    transform-origin: 0% 0%;
-  }
+#menuToggle span:first-child {
+  transform-origin: 0% 0%;
+}
 
-  #menuToggle span:nth-last-child(2)
-  {
-    transform-origin: 0% 100%;
-  }
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
 
 #menuToggle input:checked ~ span {
   opacity: 1;
@@ -102,20 +124,21 @@ body {
 #menuToggle input:checked ~ span:nth-last-child(2) {
   transform: rotate(-45deg) translate(0, -1px);
 }
+
 #menu {
-position: fixed;
-top:0px;
-display: table;
-width: 240px;
-height: 100vh;
-margin: 0 0 0 -200px;
-padding: 0px;
-background: #000;
--webkit-font-smoothing: antialiased;
-/* to stop flickering of text in safari */
-transform-origin: 0% 0%;
-transform: translate(100%, 0);
-transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+  position: fixed;
+  top:0px;
+  display: table;
+  width: 240px;
+  height: 100vh;
+  margin: 0 0 0 -200px;
+  padding: 0px;
+  background: #000;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+  transform-origin: 0% 0%;
+  transform: translate(100%, 0);
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
 }
 
 #menu .menu-links {
@@ -125,26 +148,35 @@ transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
 }
 
 #menu .menu-links a {
-display: block;
-width: 100%;
-padding: 5px 0px;
-font-family: 'Roboto', sans-serif;
-font-weight: 400;
-text-transform: uppercase;
-letter-spacing: 1px;
-font-size: 14px;
-color: #fff;
+  display: block;
+  width: 100%;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 14px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+#menu .menu-links a:last-child {
+  margin-bottom: 0px;
 }
 #menu .menu-links a:hover {
   text-decoration: none;
+  font-weight: 700;
 }
 #menuToggle input:checked ~ div {
 transform: none;
 }
 
 .sidenav-links {
-  vertical-align: middle;
-  display: table-cell;
+  display: block;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 3;
 }
 
 .nav-link {
@@ -156,43 +188,42 @@ transform: none;
 
 .nav-link span {
   display: inline-block;
-    width: 10px;
-    height: 10px;
-    background-color: #000;
-    border: 2px solid #fff;
-    border-radius: 5px;
+  width: 10px;
+  height: 10px;
+  background-color: #000;
+  border: 1px solid #fff;
+  border-radius: 5px;
 }
 
 .nav-link.active span {
     background-color: #fff;
-    border: 2px solid #fff;
 }
 
 /* Style page content */
+.shader {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 369px;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0));
+}
 .main01 {
     width:100%;
     height:100vh;
-    background-color: yellow;
-    padding: 0px 10px;
     display: block;
-}
-.details {
-    height: 100%;
-    width: 50px;
-    position: absolute;
-    z-index: 1;
-    top: 0;
-    right: 50px;
-    background-color: transparent;
-    display: table;
+    animation: appear;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
 }
 .main02 {
     width:100%;
     height:100vh;
-    background-color: #000;
-    padding: 0px 10px;
     display: block;
     position: relative;
+    background-color: #000;
 }
 h1.section-title {
   font-family: 'Roboto', sans-serif;
@@ -200,6 +231,7 @@ h1.section-title {
   font-weight: 500;
   font-size: 60px;
   margin-bottom: 30px;
+  line-height: 64px;
 }
 p.section-text {
   font-family: 'Roboto', sans-serif;
@@ -215,10 +247,29 @@ p.section-text a {
 p.section-text a:hover {
   text-decoration: none;
 }
+.section-text a.more-info {
+  display: inline-block;
+  text-decoration: none;
+  height: 18px;
+  background: url(images/icon_right_arrow_white.svg);
+  background-repeat: no-repeat;
+  background-position: center right;
+  padding: 0px 32px 0px 0px;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: 2px;
+  margin-top: 4px;
+  line-height: 1.4;
+}
+
 .about-blurb {
   display: block;
   z-index: 1;
   max-width:486px;
+  min-width: 250px;
   position: absolute;
   top:50%;
   left: 50%;
@@ -226,9 +277,11 @@ p.section-text a:hover {
 }
 #info-panel {
   display: block;
+  width: 15px;
+  height: 15px;
   position: absolute;
   top: 25px;
-  right: 16px;
+  right: 86px;
   z-index: 1;
   -webkit-user-select: none;
   user-select: none;
@@ -236,11 +289,11 @@ p.section-text a:hover {
 
 #info-panel input {
   display: block;
-  width: 28px;
+  width: 20px;
   height: 20px;
   position: absolute;
-  top: -2px;
-  right: -2px;
+  top: -3px;
+  right: -3px;
   cursor: pointer;
   opacity: 0; /* hide this */
   z-index: 3; /* and place it over the hamburger */
@@ -257,12 +310,12 @@ p.section-text a:hover {
   margin-top: 5px;
   transform-origin: 50% 50%;
   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
-  }
+}
 
-  #info-panel span.one {
+#info-panel span.one {
   transform:rotate(90deg) translate(6px, 0px);
   margin-top: 0px;
-  }
+}
 
 #info-panel input:checked ~ span.one {
   transform: rotate(135deg) translate(4px, -4px);
@@ -287,8 +340,7 @@ opacity: 1;
   z-index: 1;
   position: absolute;
   top: -25px;
-  right: 0px;
-  margin-right: -17px;
+  right: -17px;
   width: 380px;
   height: 100vh;
   background-color: rgba(0,0,0,0.6);
@@ -299,6 +351,15 @@ opacity: 1;
   transform: translate(330px, 0) scaleX(0.15);
   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
 }
+@media screen and (max-width: 768px) {
+  #info-panel {
+    right: 66px;
+  }
+  .description {
+    width: calc(100vw - 50px);
+    transform: translate(calc(100vw - 100px), 0) scaleX(0.15);
+  }
+}
 .description h1 {
   opacity: 0;
   transition: opacity 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
@@ -306,47 +367,4 @@ opacity: 1;
 .description p {
   opacity: 0;
   transition: opacity 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
-}
-.section-text a.more-info {
-  display: inline-block;
-  text-decoration: none;
-  height: 18px;
-  background: url(images/icon_right_arrow_white.svg);
-  background-repeat: no-repeat;
-  background-position: center right;
-  padding: 0px 32px 0px 0px;
-  color: #fff;
-  text-transform: uppercase;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 300;
-  font-size: 14px;
-  letter-spacing: 2px;
-  margin-top: 4px;
-  line-height: 1.4;
-}
-.image-view {
-  display: block;
-  z-index: 1;
-  width:100%;
-  position: absolute;
-  top:50%;
-  left: 50%;
-  transform: translate(-50%, -50%)
-}
-.back-button {
-  display: block;
-  width: 100%;
-  height: auto;
-  position: fixed;
-  top:0px;
-  left:0px;
-  z-index: 2;
-  padding: 20px 25px;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 100;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  font-size: 18px;
-  color: #fff;
-  background-color: #000;
 }
