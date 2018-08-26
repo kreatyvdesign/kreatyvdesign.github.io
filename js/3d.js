@@ -40,4 +40,20 @@ $(document).ready(function(){
     $('#menuCheckbox').prop('checked', false);
   })
 
+  $(".scroll-down").click(function (){
+    $('html, body').animate({
+        scrollTop: $(window).height()
+    }, 800);
+  });
+
+  $(window).scroll(function () {
+    var Bottom = $(window).height() + $(window).scrollTop() >= $(document).height();
+    if(Bottom) {
+        $('.scroll-down').hide();
+      }
+    else {
+        $('.scroll-down').show();
+    }
+  });
+
 });
