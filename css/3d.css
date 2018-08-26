@@ -200,7 +200,6 @@ transform: none;
 }
 
 .scroll-down {
-  display: block;
   width: 100%;
   position: absolute;
   bottom: 15px;
@@ -212,6 +211,11 @@ transform: none;
 .scroll-down img {
   display: inline-block;
   height: 25px;
+}
+@media screen and (max-width: 768px) {
+  .scroll-down {
+    display: none !important;
+  }
 }
 
 /* Style page content */
