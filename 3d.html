@@ -27,6 +27,7 @@
       <div class="sidenav-links">
           <a class="nav-link active" href="#section1"><span></span></a>
           <a class="nav-link" href="#section2"><span></span></a>
+          <a class="nav-link" href="#section3"><span></span></a>
       </div>
       <div class="scroll-down"><img src="css/images/icon_down_arrow_white.svg"></div>
       <div id="menuToggle">
@@ -36,16 +37,34 @@
           <span></span>
           <div id="menu">
             <div class="menu-links">
-              <a href="#section1">Blender Tutorial</a>
-              <a href="#section2">About</a>
+              <a href="#section1">A-Frame World</a>
+              <a href="#section2">Blender Tutorial</a>
+              <a href="#section3">About</a>
             </div>
           </div>
       </div>
     </div>
     <!-- Page content -->
-    <div class="main01" id="section1" style="background-color: #fff; background-image: url('images/blender_donuts_render.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center center;">
+    <div class="main-section" id="section1" style="background-color: purple;">
+      <video playsinline autoplay muted loop poster="images/gradient-world.png" id="bgvid">
+        <source src="images/gradient_world_small.mp4" type="video/mp4">
+      </video>
       <div id="info-panel">
-        <input id="infoCheckbox" type="checkbox"/>
+        <input id="infoCheckbox1" type="checkbox" checked="true"/>
+        <span class="one"></span>
+        <span></span>
+        <div id="description" class="description">
+          <h1 class="section-title">A-Frame World</h1>
+          <p class="section-text">My first virtual world created with <a href="https://aframe.io/" target="_blank">A-Frame WebVR library</a>. This was an exercise to play around with A-frame primitives and experiment with the environment and animation components.</p>
+          <p class="section-text">Click link below to see the full landscape in your browser. For the full VR experience, click on the headset icon to switch to headset view and use your VR headset.
+          <p class="section-text"><a class="more-info" href="gradient-world.html" target="_blank">VIEW VR WORLD</a></p>
+        </div>
+      </div>
+      <div class="shader">&nbsp;</div>
+    </div>
+    <div class="main-section" id="section2" style="background-color: #fff; background-image: url('images/blender_donuts_render.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center center;">
+      <div id="info-panel">
+        <input id="infoCheckbox2" type="checkbox" checked="true"/>
         <span class="one"></span>
         <span></span>
         <div id="description" class="description">
@@ -56,7 +75,7 @@
       </div>
       <div class="shader">&nbsp;</div>
     </div>
-    <div class="main02" id="section2">
+    <div class="about-section" id="section3">
       <div class="about-blurb">
         <h1 class="section-title">About</h1>
         <p class="section-text">After 10 years of working in print design, web design, and interface design, I decided to explore design outside the two dimensional surface. This is my collection of exercises and experiments with new 3D design tools and resources. I believe the future of design is beyond the screen and in our environment, and I am here to explore how to bridge this gap.</p>

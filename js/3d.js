@@ -1,11 +1,5 @@
 $(document).ready(function(){
 
-  if ($(window).width() < 960) {
-    $('#infoCheckbox').prop('checked', false);
-  } else {
-    $('#infoCheckbox').prop('checked', true);
-  };
-  
   $('a[href*="#"]')
   // Remove links that don't actually link to anything
   .not('[href="#"]')
