@@ -31,12 +31,7 @@ body {
   font-size: 18px;
   color: #fff;
   text-decoration: none;
-  opacity: 0;
-  animation: appear;
-  animation-delay: 1s;
-  animation-duration: 2s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
+  opacity: 1;
 }
 .branding a span {
   font-weight: 500;
