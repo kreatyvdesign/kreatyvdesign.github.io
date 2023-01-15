@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Gradient World</title>
+    <meta name="description" content="Gradient World">
+    <script src="js/aframe.min.js"></script>
+    <script src="js/aframe-environment-component.min.js"></script>
+    <script src="js/aframe-animation-component.min.js"></script>
+    <script src="js/star-system.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <a-entity environment ="preset: yavapai; skyColor: #0e0a32; horizonColor: #673062; ground: hills; groundColor: #120021; groundTexture: walkernoise; groundColor2: #0d0017; dressingColor: #120021; grid: none; fog: 0.6;">
+      </a-entity>
+      <a-entity star-system ="count: 1000; radius: 100; depth: 0; starSize: 0.3" material="fog: false"></a-entity>
+      <a-entity id="lightSphere" geometry="primitive: sphere; radius: 1" material="shader: gradientshader; bottomColor: #00ffff;" light="type: point; color: #00ffe7; angle: 10; decay: 1.0; distance: 9; intensity: 10;" position="10 6 -10" rotation="-90 0 0" animation="dur: 1200; easing: easeInOutQuad; property: position; to: 10 7 -10; dir: alternate; loop: true"></a-entity>
+      <a-entity id="lightSphere" geometry="primitive: sphere; radius: 1" material="shader: gradientshader; bottomColor: #00ffff;" light="type: point; color: #00ffe7; angle: 10; decay: 1.0; distance: 9; intensity: 10;" position="10 6 -80" rotation="-90 0 0" animation="dur: 1200; easing: easeInOutQuad; property: position; to: 10 7 -80; dir: alternate; loop: true"></a-entity>
+      <a-entity id="lightSphere" geometry="primitive: sphere; radius: 1" material="shader: gradientshader; bottomColor: #00ffff;" light="type: point; color: #00ffe7; angle: 10; decay: 1.0; distance: 9; intensity: 10;" position="-10 6 -35" rotation="-90 0 0" animation="dur: 1200; easing: easeInOutQuad; property: position; to: -10 7 -35; dir: alternate; loop: true"></a-entity>
+      <a-entity id="lightSphere" geometry="primitive: sphere; radius: 1" material="shader: gradientshader; bottomColor: #00ffff;" light="type: point; color: #00ffe7; angle: 10; decay: 1.0; distance: 9; intensity: 10;" position="-12 6 -19" rotation="-90 0 0" animation="dur: 1200; easing: easeInOutQuad; property: position; to: -12 7 -19; dir: alternate; loop: true"></a-entity>
+      <a-entity id="lightSphere" geometry="primitive: sphere; radius: 1" material="shader: gradientshader; bottomColor: #00ffff;" light="type: point; color: #00ffe7; angle: 10; decay: 1.0; distance: 9; intensity: 10;" position="-35 6 -35" rotation="-90 0 0" animation="dur: 1200; easing: easeInOutQuad; property: position; to: -35 7 -35; dir: alternate; loop: true"></a-entity>
+      <a-entity id="lightSphere" geometry="primitive: sphere; radius: 1" material="shader: gradientshader; bottomColor: #00ffff;" light="type: point; color: #00ffe7; angle: 10; decay: 1.0; distance: 9; intensity: 10;" position="40 10 -85" rotation="-90 0 0" animation="dur: 1200; easing: easeInOutQuad; property: position; to: 40 11 -85; dir: alternate; loop: true"></a-entity>
+      <a-entity id="lightSphere" geometry="primitive: sphere; radius: 1" material="shader: gradientshader; bottomColor: #00ffff;" light="type: point; color: #00ffe7; angle: 10; decay: 1.0; distance: 9; intensity: 10;" position="-10 6 10" rotation="-90 0 0" animation="dur: 1200; easing: easeInOutQuad; property: position; to: -10 7 10; dir: alternate; loop: true"></a-entity>
+      <a-entity id="lightSphere" geometry="primitive: sphere; radius: 1" material="shader: gradientshader; bottomColor: #00ffff;" light="type: point; color: #00ffe7; angle: 10; decay: 1.0; distance: 9; intensity: 10;" position="23 10 60" rotation="-90 0 0" animation="dur: 1200; easing: easeInOutQuad; property: position; to: 23 11 60; dir: alternate; loop: true"></a-entity>
+      <a-entity id="lightSphere" geometry="primitive: sphere; radius: 1" material="shader: gradientshader; bottomColor: #00ffff;" light="type: point; color: #00ffe7; angle: 10; decay: 1.0; distance: 9; intensity: 10;" position="20 6 20" rotation="-90 0 0" animation="dur: 1200; easing: easeInOutQuad; property: position; to: 20 7 20; dir: alternate; loop: true"></a-entity>
+      <a-entity id="lightSphere" geometry="primitive: sphere; radius: 1" material="shader: gradientshader; bottomColor: #00ffff;" light="type: point; color: #00ffe7; angle: 10; decay: 1.0; distance: 9; intensity: 10;" position="40 13 75" rotation="-90 0 0" animation="dur: 1200; easing: easeInOutQuad; property: position; to: 40 14 75; dir: alternate; loop: true"></a-entity>
+      <a-entity id="lightSphere" geometry="primitive: sphere; radius: 1" material="shader: gradientshader; bottomColor: #00ffff;" light="type: point; color: #00ffe7; angle: 10; decay: 1.0; distance: 9; intensity: 10;" position="-70 10 68" rotation="-90 0 0" animation="dur: 1200; easing: easeInOutQuad; property: position; to: -70 11 68; dir: alternate; loop: true"></a-entity>
+      <a-entity id="lightSphere" geometry="primitive: sphere; radius: 1" material="shader: gradientshader; bottomColor: #00ffff;" light="type: point; color: #00ffe7; angle: 10; decay: 1.0; distance: 9; intensity: 10;" position="-20 10 50" rotation="-90 0 0" animation="dur: 1200; easing: easeInOutQuad; property: position; to: -20 11 50; dir: alternate; loop: true"></a-entity>
+      <a-torus-knot color="#673062" light="type: ambient; intensity: 0.1;" arc="180" p="5" q="3" radius="8" radius-tubular="0.3" segments-tubular="300" position="0 2 -50" roughness="1.0" ></a-torus-knot>
+      <a-torus-knot color="#673062" light="type: ambient; intensity: 0.1;" arc="180" p="5" q="3" radius="8" radius-tubular="0.3" segments-tubular="300" position="0 2 0" roughness="1.0"></a-torus-knot>
+      <a-torus-knot color="#673062" light="type: ambient; intensity: 0.1;" arc="180" p="5" q="3" radius="8" radius-tubular="0.3" segments-tubular="300" position="0 2 50" roughness="1.0"></a-torus-knot>
+      <a-entity position="20 0 0" rotation="0 -10 0" scale="2 2 2">
+        <a-dodecahedron color="#120021" radius="2" rotation="0 -45 0" position="0 1 -10" light="type: ambient; intensity: 0.3; color: #e85c9b"></a-dodecahedron>
+        <a-dodecahedron color="#120021" radius="1" rotation="0 -45 0" position="0.5 0.5 -8"></a-dodecahedron>
+        <a-dodecahedron color="#120021" radius="1" rotation="0 -45 0" position="2 0.5 -8"></a-dodecahedron>
+        <a-dodecahedron color="#120021" radius="1" rotation="0 -45 0" position="-2 0.5 -12"></a-dodecahedron>
+        <a-dodecahedron color="#120021" radius="0.8" rotation="0 -45 0" position="-2 0.4 -8"></a-dodecahedron>
+      </a-entity>
+      <a-entity position="0 0 -20" rotation="0 70 0" scale="2 2 2">
+        <a-dodecahedron color="#120021" radius="2" rotation="0 -45 0" position="0 1 -10" light="type: ambient; intensity: 0.3; color: #e85c9b"></a-dodecahedron>
+        <a-dodecahedron color="#120021" radius="1" rotation="0 -45 0" position="0.5 0.5 -8"></a-dodecahedron>
+        <a-dodecahedron color="#120021" radius="1" rotation="0 -45 0" position="2 0.5 -8"></a-dodecahedron>
+        <a-dodecahedron color="#120021" radius="1" rotation="0 -45 0" position="-2 0.5 -12"></a-dodecahedron>
+        <a-dodecahedron color="#120021" radius="0.8" rotation="0 -45 0" position="-2 0.4 -8"></a-dodecahedron>
+      </a-entity>
+      <a-entity position="60 0 60" rotation="0 90 0" scale="3 3 3">
+        <a-dodecahedron color="#120021" radius="2" rotation="0 -45 0" position="0 1 -10" light="type: ambient; intensity: 0.3; color: #e85c9b"></a-dodecahedron>
+        <a-dodecahedron color="#120021" radius="1" rotation="0 -45 0" position="0.5 0.5 -8"></a-dodecahedron>
+        <a-dodecahedron color="#120021" radius="1" rotation="0 -45 0" position="2 0.5 -8"></a-dodecahedron>
+        <a-dodecahedron color="#120021" radius="1" rotation="0 -45 0" position="-2 0.5 -12"></a-dodecahedron>
+        <a-dodecahedron color="#120021" radius="0.8" rotation="0 -45 0" position="-2 0.4 -8"></a-dodecahedron>
+      </a-entity>
+      <a-entity position="40 0 65" scale="2 2 2">
+        <a-dodecahedron color="#120021" radius="2" rotation="0 -45 0" position="0 1 -10" light="type: ambient; intensity: 0.3; color: #e85c9b"></a-dodecahedron>
+        <a-dodecahedron color="#120021" radius="1" rotation="0 -45 0" position="0.5 0.5 -8"></a-dodecahedron>
+        <a-dodecahedron color="#120021" radius="1" rotation="0 -45 0" position="2 0.5 -8"></a-dodecahedron>
+        <a-dodecahedron color="#120021" radius="1" rotation="0 -45 0" position="-2 0.5 -12"></a-dodecahedron>
+        <a-dodecahedron color="#120021" radius="0.8" rotation="0 -45 0" position="-2 0.4 -8"></a-dodecahedron>
+      </a-entity>
+      <a-entity position="40 0 -50" rotation="0 20 0" scale="3 3 3">
+        <a-dodecahedron color="#120021" radius="2" rotation="0 -45 0" position="0 1 -10" light="type: ambient; intensity: 0.3; color: #e85c9b"></a-dodecahedron>
+        <a-dodecahedron color="#120021" radius="1" rotation="0 -45 0" position="0.5 0.5 -8"></a-dodecahedron>
+        <a-dodecahedron color="#120021" radius="1" rotation="0 -45 0" position="2 0.5 -8"></a-dodecahedron>
+        <a-dodecahedron color="#120021" radius="1" rotation="0 -45 0" position="-2 0.5 -12"></a-dodecahedron>
+        <a-dodecahedron color="#120021" radius="0.8" rotation="0 -45 0" position="-2 0.4 -8"></a-dodecahedron>
+      </a-entity>
+      <a-entity position="-50 0 30" scale="2 2 2">
+        <a-dodecahedron color="#120021" radius="2" rotation="0 -45 0" position="0 1 -10" light="type: ambient; intensity: 0.3; color: #e85c9b"></a-dodecahedron>
+        <a-dodecahedron color="#120021" radius="1" rotation="0 -45 0" position="0.5 0.5 -8"></a-dodecahedron>
+        <a-dodecahedron color="#120021" radius="1" rotation="0 -45 0" position="2 0.5 -8"></a-dodecahedron>
+        <a-dodecahedron color="#120021" radius="1" rotation="0 -45 0" position="-2 0.5 -12"></a-dodecahedron>
+        <a-dodecahedron color="#120021" radius="0.8" rotation="0 -45 0" position="-2 0.4 -8"></a-dodecahedron>
+      </a-entity>
+      <a-entity position="-20 0 75" scale="1.5 1.5 1.5">
+        <a-dodecahedron color="#120021" radius="2" rotation="0 -45 0" position="0 1 -10" light="type: ambient; intensity: 0.3; color: #e85c9b"></a-dodecahedron>
+        <a-dodecahedron color="#120021" radius="1" rotation="0 -45 0" position="0.5 0.5 -8"></a-dodecahedron>
+        <a-dodecahedron color="#120021" radius="1" rotation="0 -45 0" position="2 0.5 -8"></a-dodecahedron>
+        <a-dodecahedron color="#120021" radius="1" rotation="0 -45 0" position="-2 0.5 -12"></a-dodecahedron>
+        <a-dodecahedron color="#120021" radius="0.8" rotation="0 -45 0" position="-2 0.4 -8"></a-dodecahedron>
+      </a-entity>
+      <a-entity position="0 1.5 0" rotation="15 0 0">
+        <a-camera></a-camera>
+      </a-entity>
+    </a-scene>
+  </body>
+</html>
